@@ -26,7 +26,6 @@ def shuffle_string(str_shuffle):
     str_shuffle = "".join(list_str)
     return str_shuffle
 
-
 str_input = input("Enter a string of exactly 10 characters :")
 
 if len(str_input) < 10:
