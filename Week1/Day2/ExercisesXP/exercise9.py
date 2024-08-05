@@ -23,8 +23,10 @@ for i in range(cout_members):
         sum += 10
     else:
         sum += 15
+
 print(f"The total cost is {sum}") 
 
+# -----------------------------------------------------------------------------------------
 list_teens = ["Harry James Potter", "Ronald Bilius «Ron» Weasley", "Hermione Jean Granger"]
 list_bad_kids = []
 for i in range(len(list_teens)):
