@@ -19,7 +19,7 @@ for i in range(cout_members):
     age = int(input(f"Age of participant number {i+1}:"))
     if age > 2 and age < 12:
         sum += 10
-    elif age > 12:
+    elif age >= 12:
         sum += 15
 
 print(f"The total cost is {sum}") 
