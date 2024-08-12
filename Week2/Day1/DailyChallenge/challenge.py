@@ -1,8 +1,7 @@
 class Farm:
-    dict_animals = {}
-
     def __init__(self, name: str):
         self.name = name
+        self.dict_animals = {}
 
     def add_animal(self, type: str, count=1):
         self.dict_animals[type] = self.dict_animals.setdefault(type, 0) + count
@@ -32,4 +31,4 @@ macdonald.add_animal('goat', 12)
 
 print(macdonald.get_info())
 print(macdonald.get_animal_types())
-print(macdonald.get_short_info)
+print(macdonald.get_short_info())

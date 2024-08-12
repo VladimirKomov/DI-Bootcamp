@@ -70,11 +70,10 @@ import random
 
 # #4
 # class Zoo:
-#     dirt_animals = {}
-#     animals = []
-#
 #     def __init__(self, zoo_name: str):
 #         self.name = zoo_name
+#         self.dict_animals = {}
+#         self.animals = []
 #
 #     def add_animal(self, new_animals):
 #         self.animals.extend(new_animals)
@@ -95,24 +94,26 @@ import random
 #             if animal[0] != current_letter:
 #                 group_number += 1
 #                 current_letter = animal[0]
-#             if group_number not in self.dirt_animals:
-#                 self.dirt_animals[group_number] = []
-#             self.dirt_animals[group_number].append(animal)
+#             if group_number not in self.dict_animals:
+#                 self.dict_animals[group_number] = []
+#             self.dict_animals[group_number].append(animal)
 #
 #     def get_groups(self):
-#         print(self.dirt_animals)
+#         print(self.dict_animals)
 #
 #
 # ramat_gan_safari = Zoo("ramat_gan_safari")
-# alimals = []
-# input_animal = "";
-# while input != exit:
-#     input = input("Which animal should we add to the zoo, for exit input 'exit': ")
-#     alimals.append(input)
-# ramat_gan_safari.add_animal(alimals)
+# animals = []
+# input_animal = ""
+# while input_animal != 'exit':
+#     input_animal = input("Which animal should we add to the zoo, for exit input 'exit': ")
+#     if input_animal != 'exit':
+#         animals.append(input_animal)
 #
-# input_sell = input("Which animal should we sell : ")
+# ramat_gan_safari.add_animal(animals)
+# input_sell = input("Which animal should we sell: ")
+#
 # ramat_gan_safari.sell_animal(input_sell)
-#
 # ramat_gan_safari.sort_animals()
 # ramat_gan_safari.get_groups()
+
