@@ -7,6 +7,7 @@ def get_user_menu_choice():
                        ':')
     return user_input
 
+
 def print_results(results: dict):
     print(f"Game results:\n"
           f"    You won  {results["won"]} times\n"
@@ -14,9 +15,12 @@ def print_results(results: dict):
           f"    You drew {results["drew"]} times\n"
           "Thank you for your playing!")
 
+
 # Displaying the menu repeatedly, until the user types in the value to exit the program:
 # (Make use of the get_user_menu_choice function)
 game = None
+
+
 def main():
     global game
     user_input = get_user_menu_choice().lower()
@@ -35,7 +39,5 @@ def main():
     if user_input == 'q':
         print_results(game.results_dist)
 
+
 main()
-
-
-
