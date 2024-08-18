@@ -1,5 +1,3 @@
-# 1 ######################
-
 CREATE DATABASE public
 
 CREATE TABLE IF NOT EXISTS items (
