@@ -58,7 +58,7 @@ class CountryManager:
             return False
         finally:
             connection.close()
-        return True
+            return True
 
     @staticmethod
     def __make_connection() -> psycopg2.extensions.connection:
