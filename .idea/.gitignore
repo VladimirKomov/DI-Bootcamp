@@ -2,5 +2,7 @@
 /shelf/
 /workspace.xml
 /venv/
-/Week3/Day4/ExercisesXP/config.ini
-**/config.ini
+/.venv/
+**/config_database.ini
+**/__pycache__
+/.idea/

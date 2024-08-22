@@ -1,9 +1,8 @@
 # Default ignored files
 /shelf/
 /workspace.xml
-venv/
-.venv/
-Week3/Day4/ExercisesXP/config.ini
+/venv/
+/.venv/
 **/config_database.ini
 **/__pycache__
-.idea/
+/.idea/
