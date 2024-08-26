@@ -16,14 +16,14 @@ let sentences = ['This dinner is not that bad ! You cook well',
     'This movie is not so bad !',
     'This dinner is bad !'];
 for (let sentence of sentences) {
-    let wordNot = sentence.indexOf('not');
-    let wordBad = sentence.indexOf('bad');
-    if (wordNot === -1) {
-        console.log(sentence);
-    } else if (wordNot < wordBad) {
-        let result = sentence.slice(0, wordNot) + 'good' + sentence.slice(wordBad + 'bad'.length)
-        console.log(result)
-    } else {
-        console.log(sentence);
-    }
+let wordNot = sentence.indexOf('not');
+let wordBad = sentence.indexOf('bad');
+if (wordNot === -1) {
+    console.log(sentence);
+} else if (wordNot < wordBad) {
+    let result = sentence.slice(0, wordNot) + 'good' + sentence.slice(wordBad + 'bad'.length)
+    console.log(result)
+} else {
+    console.log(sentence);
+}
 }
