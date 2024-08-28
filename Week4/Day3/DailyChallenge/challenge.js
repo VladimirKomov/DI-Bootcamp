@@ -78,6 +78,6 @@ for (let divElement of divElements) {
             planetContainer.appendChild(newDivMoon);  // Добавляем в planetContainer
         }
     }
-    
+
     divElement.replaceWith(planetContainer);
 }
