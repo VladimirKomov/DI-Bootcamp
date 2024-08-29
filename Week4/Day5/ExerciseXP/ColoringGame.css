@@ -1,0 +1,126 @@
+body {
+    width: 98vw;
+    height: 98vh;
+    box-sizing: border-box;
+    display: flex;
+    /*background-color: azure;*/
+}
+
+#sidebar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 2px;
+    width: 20%;
+    height: 100%;
+}
+
+#field {
+    display: grid;
+    grid-template-columns: repeat(50, 1fr);
+    grid-template-rows: repeat(50, 1fr);
+    width: 80%;
+    height: 100%;
+}
+
+div {
+    border: 1px solid gray;
+}
+
+#clear {
+    grid-column: 1/4;
+}
+
+button {
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+
+}
+
+/*colors buttons*/
+#orange {
+    background-color: orange;
+}
+
+#orangered {
+    background-color: orangered;
+}
+
+#red {
+    background-color: red;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#yellowgreen {
+    background-color: yellowgreen;
+}
+
+#lightgreen {
+    background-color: lightgreen;
+}
+
+#green {
+    background-color: green;
+}
+
+#turquoise {
+    background-color: turquoise;
+}
+
+#cyan {
+    background-color: cyan;
+}
+
+#lightskyblue{
+    background-color: lightskyblue;
+}
+
+#dodgerblue {
+    background-color: dodgerblue;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#darkblue {
+    background-color: darkblue;
+}
+
+#indigo {
+    background-color: indigo;
+}
+
+#darkmagenta {
+    background-color: darkmagenta;
+}
+
+#violet {
+    background-color: violet;
+}
+
+#lightpink {
+    background-color: lightpink;
+}
+
+#lightgreen {
+    background-color: lightgreen;
+}
+
+#green {
+    background-color: green;
+}
+
+#black {
+    background-color: black;
+}
+
+#white {
+    background-color: white;
+}
+
+
