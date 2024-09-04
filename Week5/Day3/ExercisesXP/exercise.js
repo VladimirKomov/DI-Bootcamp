@@ -63,45 +63,45 @@ class Dog {
     }
 };
 // Analyze the options below. Which constructor will successfully extend the Dog class?
-    // 1
-    class Labrador extends Dog {
-        constructor(name, size) {
-            this.size = size;
-        }
-    };
-
-
-// 2 it's correct!!!
-class Labrador extends Dog {
-    constructor(name, size) {
-        super(name);
-        this.size = size;
-    }
-};
-
-
-// 3
-class Labrador extends Dog {
-    constructor(size) {
-        super(name);
-        this.size = size;
-    }
-};
-
-
-// 4
-class Labrador extends Dog {
-    constructor(name, size) {
-        this.name = name;
-        this.size = size;
-    }
-};
+//     // 1
+//     class Labrador extends Dog {
+//         constructor(name, size) {
+//             this.size = size;
+//         }
+//     };
+//
+//
+// // 2 it's correct!!!
+// class Labrador extends Dog {
+//     constructor(name, size) {
+//         super(name);
+//         this.size = size;
+//     }
+// };
+//
+//
+// // 3
+// class Labrador extends Dog {
+//     constructor(size) {
+//         super(name);
+//         this.size = size;
+//     }
+// };
+//
+//
+// // 4
+// class Labrador extends Dog {
+//     constructor(name, size) {
+//         this.name = name;
+//         this.size = size;
+//     }
+// };
 
 
 // 6 ////////////////////////////////////
 //Evaluate these (ie True or False
-[2] === [2] //false this is different references
-{} === {} //false this is different references
+// [2] === [2] //false this is different references
+// {} === {} //false this is different references
 
 // What is, for each object below, the value of the property number and why?
 const object1 = { number: 5 }; //make object, assigning the reference
