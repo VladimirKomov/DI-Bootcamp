@@ -7,5 +7,11 @@
 **/__pycache__
 /.idea/
 /.vscode/
+
+#all test file
 **/test.js
 **/test.html
+
+#for js
+**/daly_tasks
+**/package-lock.json
