@@ -11,7 +11,7 @@ async function readFile(filePath, encoding='utf8') {
         const data = await fs.readFile(filePath);
         return data;
     } catch (e) {
-        console.error("Error reading", e.message);
+        throw new Error(`Error reading file: ${e.message}`);
     }
 }
 
@@ -19,7 +19,7 @@ async function writeFile(filePath, data) {
     try {
         await fs.writeFile(filePath, data);
     } catch (e) {
-        console.error("Error writing", e.message);
+        throw new Error(`Error writing file: ${e.message}`);
     }
 }
 
