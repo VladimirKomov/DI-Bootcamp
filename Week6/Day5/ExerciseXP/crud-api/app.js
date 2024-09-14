@@ -1,10 +1,10 @@
 // Create a new directory named crud-api.
 //     Inside the crud-api directory, initialize a new Node.js project and install the express and axios packages.
-//     Create a new file named app.js in the crud-api directory.
-//     In app.js, import the express module and create an instance of an Express app.
+//     Create a new file named server.js in the crud-api directory.
+//     In server.js, import the express module and create an instance of an Express app.
 //     Set up the app to listen on port 5000. Print a message in the console to indicate that the server is running.
 
-// Inside app.js, import the dataService module you created.
+// Inside server.js, import the dataService module you created.
 //     Create an endpoint in your Express app that uses the fetchPosts function from the dataService module
 //     to retrieve data from the JSONPlaceholder API.
 //     Respond with the fetched data from the JSONPlaceholder API. https://jsonplaceholder.typicode.com/posts

@@ -1,6 +1,6 @@
 // Create a directory named todoApp.
 //
-//     Inside the todoApp directory, create two files: todo.js and app.js.
+//     Inside the todoApp directory, create two files: todo.js and server.js.
 //
 //     In todo.js, define an ES6 module that exports a TodoList class.
 //

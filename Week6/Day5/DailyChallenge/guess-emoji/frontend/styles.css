@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("back-round.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 92%;
+}
+
+button {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#emojiDisplay {
+    font-size: 150px;
+    margin-bottom: 20px;
+}
+
+#emojiContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки одинаковой ширины */
+    grid-gap: 10px; /* Пробелы между кнопками */
+    justify-items: center; /* Центрирование кнопок по горизонтали */
+    align-items: center; /* Центрирование кнопок по вертикали */
+}
+
+.emoji-btn {
+    height: 100px;
+    width: 100px;
+    font-size: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.correct-answer {
+    background-color: #28a745; /* Зелёный цвет для правильного ответа */
+    color: white;
+}
+
+#descriptionDisplay {
+    padding-bottom: 10px;
+}
+
+#result{
+    padding-bottom: 10px;
+}

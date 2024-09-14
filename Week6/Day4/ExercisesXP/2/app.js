@@ -1,12 +1,12 @@
-// Create another file named app.js.
+// Create another file named server.js.
 //
-//     In app.js, import the array of person objects from the data.js module.
+//     In server.js, import the array of person objects from the data.js module.
 //
 //     Write a function that calculates and prints the average age of all the persons in the array.
 //
-//     Use the imported array and the average age function in app.js.
+//     Use the imported array and the average age function in server.js.
 //
-//     Run app.js and confirm that the average age is correctly calculated and displayed.
+//     Run server.js and confirm that the average age is correctly calculated and displayed.
 
 import {peopleArr} from "./data.js";
 

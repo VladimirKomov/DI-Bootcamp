@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+
+
+    <div id="authForm">
+        <h1>Guess the emoji</h1>
+        <input type="name" id="name" placeholder="name..." required>
+        <input type="password" id="password" placeholder="password..." required>
+        <button id="loginBtn">sign in</button>
+        <button id="registerBtn">sign up</button>
+        <div id="authMessage"></div>
+    </div>
+
+    <div id="categoryArea" style="display:none;">
+        <h2>Select a category</h2>
+        <div id="categoriesDisplay"></div>
+    </div>
+
+    <div id="gameArea" style="display:none;">
+        <h2 id="userName"></h2>
+        <h3>Score: <span id="scoreDisplay">0</span></h3>
+        <h2 id="categoryDisplay"></h2>
+        <div id="descriptionDisplay"></div>
+        <div id="emojiContainer"></div>
+        <div id="result"></div>
+        <button id="retryBtn" style="display: none;">Try again</button>
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>

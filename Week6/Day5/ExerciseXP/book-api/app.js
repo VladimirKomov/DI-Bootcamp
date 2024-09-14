@@ -1,7 +1,7 @@
 // Create a new directory named book-api.
 //     Inside the book-api directory, initialize a new Node.js project and install the express package.
-//     Create a new file named app.js in the book-api directory.
-//     In app.js, import the express module and create an instance of an Express app.
+//     Create a new file named server.js in the book-api directory.
+//     In server.js, import the express module and create an instance of an Express app.
 //     Define a basic data array containing a few book objects. Each book object should have properties like id,
 //     title, author, and publishedYear.
 //     Set up the app to listen on port 5000. Print a message in the console to indicate that the server is running.
