@@ -40,10 +40,10 @@ button {
 
 #emojiContainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 колонки одинаковой ширины */
-    grid-gap: 10px; /* Пробелы между кнопками */
-    justify-items: center; /* Центрирование кнопок по горизонтали */
-    align-items: center; /* Центрирование кнопок по вертикали */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
 }
 
 .emoji-btn {
@@ -58,7 +58,7 @@ button {
 }
 
 .correct-answer {
-    background-color: #28a745; /* Зелёный цвет для правильного ответа */
+    background-color: #28a745; 
     color: white;
 }
 
