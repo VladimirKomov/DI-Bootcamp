@@ -50,9 +50,9 @@ export async function updateData(id, data) {
 export async function deleteData(id) {
     try {
         const result = await db('posts').where('id', id).del().returning('id');
-        console.log('Delete post from db id=' + JSON.stringify(result));
+        console.log('Del post from db id=' + JSON.stringify(result));
         return result;
     } catch (error) {
         console.error(error);
     }
-};
+}
