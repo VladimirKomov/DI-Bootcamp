@@ -1,4 +1,4 @@
-import {createData, deleteData, fetchData, fetchDataById, updateData} from "../db/requestDb.js";
+import {createData, deleteData, fetchData, fetchDataById, updateData} from "../models/requestDb.js";
 import * as console from "node:console";
 
 
