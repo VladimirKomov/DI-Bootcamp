@@ -1,6 +1,5 @@
 import express from 'express';
 import {changeUser, createUser, getAllUsers, getHashpwd, getUser} from "../controllers/userController.js";
-import {updateUser} from "../models/userModel.js";
 
 
 // POST /register: Allow users to register by providing a username and password. Hash the password using bcrypt before storing it in the the database
