@@ -6,8 +6,6 @@
 
 import {readFile, writeFile} from "../models/tastkModel.js";
 import console from "node:console";
-import req from "express/lib/request.js";
-import res from "express/lib/response.js";
 
 const tasksFilePath = './config/tasks.json';
 

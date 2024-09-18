@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            font-size: 24px;
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 200px;
+            padding: 5px;
+        }
+        input[type="submit"] {
+            padding: 5px 10px;
+        }
+        .form-container {
+            margin-bottom: 30px;
+            display: none;
+        }
+        .form-container.active {
+            display: block;
+        }
+        .error-message {
+            color: red;
+        }
+        .toggle-btn {
+            margin: 10px 0;
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<button class="toggle-btn" onclick="showForm('register')">Register</button>
+<button class="toggle-btn" onclick="showForm('login')">Login</button>
+
+<div id="register-form" class="form-container active">
+    <h2>Register :</h2>
+    <form id="registerForm">
+        <label for="first_name">First name:</label>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+
+        <label for="last_name">Last name:</label>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+    <p id="message" class="message"></p>
+</div>
+
+<div id="login-form" class="form-container">
+    <h2>Login :</h2>
+    <form id="loginForm">
+        <label for="login_username">Username:</label>
+        <input type="text" id="login_username" name="username" required><br><br>
+
+        <label for="login_password">Password:</label>
+        <input type="password" id="login_password" name="password" required><br><br>
+
+        <input type="submit" value="Login">
+    </form>
+    <p id="login_message" class="message"></p>
+</div>
+
+
+</body>
+</html>

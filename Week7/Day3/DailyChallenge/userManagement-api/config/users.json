@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "firstName": "firstName8888",
+    "lastName": "lastName88888",
+    "email": "email1@email.email",
+    "userName": "test1",
+    "password": "$2a$10$CptYUvi4VbCcwVzXBmdK3eHDpne2.1/kJZCcpDkRpjjml0Qw4zzcC"
+  },
+  {
+    "id": 2,
+    "firstName": "vova",
+    "lastName": "vova",
+    "email": "vova@vova.com",
+    "userName": "vova",
+    "password": "$2a$10$fZmvGJ6uqb4FQeH7ELsymufypvjEOpACNNMPQCrgBTGk0Aky8qrym"
+  }
+]
