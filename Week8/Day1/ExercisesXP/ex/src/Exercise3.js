@@ -2,6 +2,18 @@ import React from 'react';
 import logo from './logo.svg';
 import './Exercise.css';
 
+// There is a contradiction in the task
+// create a <h1> tag and set its color to red, and the background color to lightblue.
+// BUT
+// Add the below object to the component Exercise. Use this object to style the <h1>.
+// const style_header = {
+//     color: "white",
+//     backgroundColor: "DodgerBlue",
+//     padding: "10px",
+//     fontFamily: "Arial"
+// };
+
+
 const style_header = {
     color: "white",
     backgroundColor: "DodgerBlue",
