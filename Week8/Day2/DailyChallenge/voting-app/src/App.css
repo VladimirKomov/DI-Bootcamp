@@ -1,0 +1,41 @@
+html, body {
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Прижимаем контейнер к верхнему краю */
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+}
+
+.language {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  background-color: #cbd880;
+  border: 3px solid black;
+  margin: 3px;
+}
+
+.vote {
+  width: 20px;
+}
+
+.title {
+  width: 100px;
+  text-align: center;
+}
+
+.button {
+  background-color: #cbd880;
+  color: green;
+}
