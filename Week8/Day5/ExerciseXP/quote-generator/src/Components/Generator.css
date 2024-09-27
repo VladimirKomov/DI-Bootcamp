@@ -1,0 +1,42 @@
+.container {
+    background-color: lightyellow;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.quoteText {
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.authorText {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    color: #555;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.newQuoteButton {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.newQuoteButton:hover {
+    background-color: #0056b3;
+}
