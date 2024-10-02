@@ -10,13 +10,6 @@ const TodoList = () => {
     const dispatch = useDispatch();
     const filter = useSelector((state) => state.filter);
 
-
-
-
-    const handleRemoveTodo = (id) => {
-        dispatch(removeTodo(id))
-    }
-
     const handleFilterTodo = todos.filter(todo => {
         if (filter === 'completed') return todo.completed;
         if (filter === 'uncompleted') return !todo.completed;
@@ -33,7 +26,7 @@ const TodoList = () => {
                     <Todo
                         key={todo.id}
                         todo={todo}
-                        onRemove={handleRemoveTodo}/>
+                    />
                 ))}
             </ul>
         </div>
