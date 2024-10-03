@@ -9,6 +9,9 @@ const TasksList = () => {
     const tasksState = useSelector(state => state.tasksState.tasksByDay[selectedDay]);
     const tasks = tasksState ? tasksState : [];
 
+    //hiding the buttons when editing a task
+    const [editingTaskId, setEditingTaskId] = React.useState(null);
+
     return (
         <div className="tasks-list">
             <ul>
@@ -17,9 +20,16 @@ const TasksList = () => {
                         key={task.id}>
                         Task: {task.text}. Created: {new Date(task.createdAt).toLocaleDateString()}
                         <div>
-                            <EditTask id={task.id} taskDay={selectedDay} taskText={task.text}/>
-                            <ToggleTaskCompletion id={task.id} taskDay={selectedDay}/>
-                            <DeleteTask id={task.id} taskDay={selectedDay}/>
+                            <EditTask id={task.id} taskDay={selectedDay} taskText={task.text}
+                                      onEditingStart={() => setEditingTaskId(task.id)}
+                                      onEditingEnd={() => setEditingTaskId(null)}/>
+                            {/*If the task is editing, hide it*/}
+                            {editingTaskId !== task.id && (
+                                <>
+                                    <ToggleTaskCompletion id={task.id} taskDay={selectedDay}/>
+                                    <DeleteTask id={task.id} taskDay={selectedDay}/>
+                                </>
+                            )}
                         </div>
                     </li>
                 ))}

@@ -1,5 +1,4 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
-import ToggleTaskCompletion from "../../components/ToggleTaskCompletion.jsx";
 
 const initialState = {
     tasksByDay : {},
