@@ -1,12 +1,13 @@
 import React from 'react';
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import { deleteTask } from '../redux/slices/tasksSlice.js';
 
-const DeleteTask = ({id, taskDay}) => {
+const DeleteTask = ({id}) => {
+    const selectedDay = useSelector(state => state.tasksState.selectedDay);
     const dispatch = useDispatch();
 
     const handleDelete = () => {
-        dispatch(deleteTask({day: taskDay, id}));
+        dispatch(deleteTask({day: selectedDay, id}));
     }
 
     return (

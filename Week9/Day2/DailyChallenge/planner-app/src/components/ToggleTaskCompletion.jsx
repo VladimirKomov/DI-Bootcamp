@@ -1,13 +1,14 @@
 import React from 'react';
 import button from "bootstrap/js/src/button.js";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import { toggleTaskCompletion } from "../redux/slices/tasksSlice.js"
 
-const ToggleTaskCompletion = ({id, taskDay}) => {
+const ToggleTaskCompletion = ({id}) => {
+    const selectedDay = useSelector(state => state.tasksState.selectedDay);
     const dispatch = useDispatch();
 
     const handleToggle = () => {
-        dispatch(toggleTaskCompletion({day: taskDay, id}));
+        dispatch(toggleTaskCompletion({day: selectedDay, id}));
     }
 
     return (

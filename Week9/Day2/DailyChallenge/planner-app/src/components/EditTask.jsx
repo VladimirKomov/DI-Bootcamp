@@ -1,15 +1,16 @@
 import React from 'react';
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {editTask} from "../redux/slices/tasksSlice.js";
 
-const EditTask = ({id, taskDay, taskText, onEditingStart, onEditingEnd}) => {
+const EditTask = ({id, taskText, onEditingStart, onEditingEnd}) => {
+    const selectedDay = useSelector(state => state.tasksState.selectedDay);
     const [newText, setNewText] = React.useState(taskText);
     const dispatch = useDispatch();
     const [isEditing, setIsEditing] = React.useState(false);
 
     const handleSaveClick = () => {
         if (newText) {
-            dispatch(editTask({id, day: taskDay, newText}));
+            dispatch(editTask({id, day: selectedDay, newText}));
             handleIsEditing();
         }
     }

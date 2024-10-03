@@ -20,14 +20,14 @@ const TasksList = () => {
                         key={task.id}>
                         Task: {task.text}. Created: {new Date(task.createdAt).toLocaleDateString()}
                         <div>
-                            <EditTask id={task.id} taskDay={selectedDay} taskText={task.text}
+                            <EditTask id={task.id} taskText={task.text}
                                       onEditingStart={() => setEditingTaskId(task.id)}
                                       onEditingEnd={() => setEditingTaskId(null)}/>
                             {/*If the task is editing, hide it*/}
                             {editingTaskId !== task.id && (
                                 <>
-                                    <ToggleTaskCompletion id={task.id} taskDay={selectedDay}/>
-                                    <DeleteTask id={task.id} taskDay={selectedDay}/>
+                                    <ToggleTaskCompletion id={task.id}/>
+                                    <DeleteTask id={task.id}/>
                                 </>
                             )}
                         </div>
