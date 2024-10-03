@@ -21,8 +21,10 @@ const TasksList = () => {
                         Task: {task.text}. Created: {new Date(task.createdAt).toLocaleDateString()}
                         <div>
                             <EditTask id={task.id} taskText={task.text}
+                                      completed = {task.completed}
                                       onEditingStart={() => setEditingTaskId(task.id)}
-                                      onEditingEnd={() => setEditingTaskId(null)}/>
+                                      onEditingEnd={() => setEditingTaskId(null)}
+                            />
                             {/*If the task is editing, hide it*/}
                             {editingTaskId !== task.id && (
                                 <>

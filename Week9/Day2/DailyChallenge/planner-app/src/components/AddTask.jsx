@@ -4,14 +4,18 @@ import {addTask} from "../redux/slices/tasksSlice.js";
 
 const AddTask = () => {
     const [taskText, setTaskText] = useState('');
-    const selectedDay = useSelector((state) => state.tasksState.selectedDay);
+    const selectDay = useSelector((state) => state.tasksState.selectedDay);
+    const [error, setError] = useState('');
     const dispatch = useDispatch();
 
     const handleAddTask = () => {
-        if (taskText) {
-            dispatch(addTask(selectedDay, taskText));
-            setTaskText('');
+        if (!taskText.trim()) {
+            setError('Task cannot be empty.');
+            return;
         }
+        dispatch(addTask(selectDay, taskText));
+        setTaskText('');
+        setError('');
     }
 
     return (
@@ -23,6 +27,8 @@ const AddTask = () => {
                 placeholder='new task...'
             />
             <button onClick={handleAddTask}>Add task</button>
+            {/*show error*/}
+            {error && <p style={{ color: 'red' }}>{error}</p>}
         </div>
     )
 }
