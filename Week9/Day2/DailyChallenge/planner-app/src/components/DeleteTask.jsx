@@ -1,5 +1,6 @@
 import React from 'react';
 import {useDispatch} from "react-redux";
+import { deleteTask } from '../redux/slices/tasksSlice.js';
 
 const DeleteTask = ({id, taskDay}) => {
     const dispatch = useDispatch();

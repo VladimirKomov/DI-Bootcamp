@@ -1,4 +1,5 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
+import ToggleTaskCompletion from "../../components/ToggleTaskCompletion.jsx";
 
 const initialState = {
     tasksByDay : {},
@@ -44,6 +45,14 @@ const tasksSlice = createSlice({
             }
         },
 
+        toggleTaskCompletion: (state, action) => {
+            const { day, id } = action.payload;
+            const task = state.tasksByDay[day].find(task => task.id === id);
+            if (task) {
+                task.completed = !task.completed;
+            }
+        },
+
         deleteTask: (state, action) => {
             const { day, id } = action.payload;
             state.tasksByDay[day] = state.tasksByDay[day].filter(task => task.id !== id);
@@ -56,5 +65,6 @@ export const {
     addTask,
     editTask,
     deleteTask,
+    toggleTaskCompletion,
     setSelectedDay } = tasksSlice.actions;
 export default tasksSlice.reducer;

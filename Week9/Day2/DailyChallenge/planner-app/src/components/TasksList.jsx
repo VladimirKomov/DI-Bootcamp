@@ -2,6 +2,7 @@ import React from 'react';
 import {useSelector} from "react-redux";
 import EditTask from "./EditTask.jsx";
 import DeleteTask from "./DeleteTask.jsx";
+import ToggleTaskCompletion from "./ToggleTaskCompletion.jsx";
 
 const TasksList = () => {
     const selectedDay = useSelector(state => state.tasksState.selectedDay);
@@ -17,6 +18,7 @@ const TasksList = () => {
                         Task: {task.text}. Created: {new Date(task.createdAt).toLocaleDateString()}
                         <div>
                             <EditTask id={task.id} taskDay={selectedDay} taskText={task.text}/>
+                            <ToggleTaskCompletion id={task.id} taskDay={selectedDay}/>
                             <DeleteTask id={task.id} taskDay={selectedDay}/>
                         </div>
                     </li>
