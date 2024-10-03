@@ -26,7 +26,7 @@ const EditTask = ({id, taskDay, taskText}) => {
     }
 
     return (
-        <div>
+        <>
             {!isEditing ? (
                 <button onClick={handleIsEditing}>Edit text</button>
                 ) : (
@@ -40,7 +40,7 @@ const EditTask = ({id, taskDay, taskText}) => {
                     <button onClick={handleCancelClick}>Cancel</button>
                 </div>
             )}
-        </div>
+        </>
     )
 
 }
