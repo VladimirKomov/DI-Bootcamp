@@ -1,5 +1,6 @@
 import React from 'react';
 import DeleteTask from "./DeleteTask.jsx";
+import ToggleTask from "./toggeTask.jsx";
 
 const Task = ({task}) => {
     const dueDate = new Date(task.dueTime);
@@ -11,6 +12,7 @@ const Task = ({task}) => {
                 style={
                     {textDecoration: task.completed ? 'line-through' : 'none'}}>
                 Description: {task.text}. Due time: {formattedTime}.
+                <ToggleTask id={task.id} completed={task.completed}/>
                 <DeleteTask id={task.id} completed={task.completed}/>
             </li>
         </>
