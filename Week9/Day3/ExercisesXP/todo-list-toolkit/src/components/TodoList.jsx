@@ -1,6 +1,6 @@
 import React from 'react';
 import {useSelector} from "react-redux";
-import Todo from "./Todo.jsx";
+import Todo from "./Todo";
 
 const TodoList = () => {
     const todos = useSelector((state) => state.todosStore.todos);
@@ -13,7 +13,7 @@ const TodoList = () => {
             ) : (
                 <ul>
                     {todos.map((todo) => (
-                        <Todo todo={todo}/>
+                        <Todo key={todo.id} todo={todo}/>
                     ))}
                 </ul>
             )}

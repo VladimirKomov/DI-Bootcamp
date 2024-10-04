@@ -24,11 +24,13 @@ const todoSlice = createSlice({
             }
         },
         removeTodo: (state, action) => {
-            state.todos = state.todos.filter(todo => todo.id !== action.payload);
+            const id = action.payload;
+            state.todos = state.todos.filter(todo => todo.id !== id);
         },
         toggleTodo: (state, action) => {
+            const id = action.payload;
             state.todos = state.todos.map(todo =>
-                todo.id === action.payload ? {...todo, completed: !todo.completed} : todo
+                todo.id === id ? {...todo, completed: !todo.completed} : todo
             );
         }
     }
