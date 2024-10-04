@@ -39,14 +39,24 @@ const taskSlice = createSlice({
             state.tasksByDay[day] = state.tasksByDay[day].filter(task => task.id !== id);
         },
         toggleTask: (state, action) => {
-            const { day, id } = action.payload;
+            const {day, id} = action.payload;
             const task = state.tasksByDay[day].find(task => task.id === id);
             if (task) {
                 task.completed = !task.completed;
             }
         },
         editTask(state, action) {
-            // Add logic to update a task
+            const {day, id, text, dueTime} = action.payload;
+            const tasks = state.tasksByDay[day];
+
+            if (tasks) {
+                const task = tasks.find(task => task.id === id);
+
+                if (task) {
+                    task.text = text;
+                    task.dueTime = dueTime;
+                }
+            }
         },
     },
 })
