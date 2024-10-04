@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useDispatch} from "react-redux";
 import {addTodo} from "../redux/todoSlice";
 
 const AddTodo = () => {
-    const [isAdding, setIsAdding] = React.useState(false);
-    const [text, setText] = React.useState('');
-    const [successMessage, setSuccessMessage] = React.useState('');
-    const [errorMessage, setErrorMessage] = React.useState('');
+    const [isAdding, setIsAdding] = useState(false);
+    const [text, setText] = useState('');
+    const [successMessage, setSuccessMessage] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
     const dispatch = useDispatch();
 
     const handleIsAdding = () => {
