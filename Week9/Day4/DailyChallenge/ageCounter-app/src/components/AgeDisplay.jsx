@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import reactLogo from '../assets/react.svg';
 import viteLogo from '../../public/vite.svg';
 import '../App.css';
+import { ClipLoader } from 'react-spinners';
 
 const AgeDisplay = () => {
     const age = useSelector((state) => state.ageStore.age);
@@ -19,6 +20,10 @@ const AgeDisplay = () => {
                     <a href="https://react.dev" target="_blank">
                         <img src={reactLogo} className="logo react" alt="React logo"/>
                     </a>
+                    <div>
+                    <ClipLoader color={"#123abc"} loading={loading} size={50} />
+                    <p>Wait...</p>
+                    </div>
                 </>
             }
         </div>

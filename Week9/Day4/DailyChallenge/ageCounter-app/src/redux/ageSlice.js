@@ -2,22 +2,22 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 
 export const ageUpAsync = createAsyncThunk(
     'age/ageUpAsync',
-    async () => {
+    async (years) => {
         return new Promise((resolve) => {
             setTimeout(() => {
-                resolve(1);
-            }, 1000);
+                resolve(years);
+            }, 1000*years);
         });
     }
 )
 
 export const ageDownAsync = createAsyncThunk(
     'age/ageDownAsync',
-    async () => {
+    async (years) => {
         return new Promise((resolve) => {
             setTimeout(() => {
-                resolve(-1);
-            }, 1000);
+                resolve(-years);
+            }, 1000*years);
         });
     }
 )
