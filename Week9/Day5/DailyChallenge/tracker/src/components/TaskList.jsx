@@ -9,7 +9,6 @@ import { editTask, updateTaskStatus } from "../redux/tasksSlice.js";
 
 const TaskList = () => {
     const [selectedCategory, setSelectedCategory] = useState('');
-    // for modal
     const [showEditModal, setShowEditModal] = useState(false);
     const [currentTask, setCurrentTask] = useState(null);
 
@@ -28,7 +27,11 @@ const TaskList = () => {
     }, [dispatch]);
 
     const handleCompleteTask = useCallback((taskId) => {
-        dispatch(updateTaskStatus({ id: taskId, status: 'COMPLETED' }));
+        dispatch(updateTaskStatus({ id: taskId, status: TASK_STATUS.COMPLETED }));
+    }, [dispatch]);
+
+    const handleStatusChange = useCallback((taskId, newStatus) => {
+        dispatch(updateTaskStatus({ id: taskId, status: newStatus }));
     }, [dispatch]);
 
     const openEditModal = (task) => {
@@ -46,6 +49,7 @@ const TaskList = () => {
                     task={task}
                     onEdit={() => openEditModal(task)}
                     onComplete={() => handleCompleteTask(task.id)}
+                    onStatusChange={handleStatusChange}
                 />
             ))}
             <EditTaskModal
@@ -56,6 +60,6 @@ const TaskList = () => {
             />
         </div>
     );
-}
+};
 
 export default TaskList;
