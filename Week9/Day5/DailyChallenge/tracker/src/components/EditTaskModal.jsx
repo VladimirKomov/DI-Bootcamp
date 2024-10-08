@@ -50,7 +50,7 @@ const EditTaskModal = ({ show, handleClose, task, handleSave }) => {
                     Close
                 </Button>
                 <Button variant="primary" onClick={handleSaveClick}>
-                    Save Changes
+                    Save changing
                 </Button>
             </Modal.Footer>
         </Modal>

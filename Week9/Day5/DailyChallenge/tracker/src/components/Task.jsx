@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 import Form from 'react-bootstrap/Form';
 import { TASK_STATUS } from '../constants/taskStatus.js';
 
-const Task = ({ task, onEdit, onComplete, onStatusChange  }) => {
+const Task = ({ task, onEdit, onStatusChange  }) => {
     return (
         <Card className="mb-3" border="dark">
             <Card.Body>
