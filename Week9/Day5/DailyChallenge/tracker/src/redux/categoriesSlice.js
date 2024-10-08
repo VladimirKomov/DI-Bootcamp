@@ -2,10 +2,8 @@ import { createSlice, nanoid } from '@reduxjs/toolkit';
 import {sampleCategories} from "../fixtures/categories.js";
 
 // const initialState = {
-//     categories: {
 //         byId: {},
 //         allIds: [],
-//     },
 // };
 
 const initialState = {

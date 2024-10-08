@@ -3,10 +3,8 @@ import { TASK_STATUS } from '../constants/taskStatus.js';
 import {sampleTasks} from "../fixtures/tasks.js";
 
 // const initialState = {
-//     tasks: {
 //         byId: {},
 //         allIds: [],
-//     },
 // };
 
 const initialState = {
