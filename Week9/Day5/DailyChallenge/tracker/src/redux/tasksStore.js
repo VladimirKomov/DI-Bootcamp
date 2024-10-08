@@ -1,7 +1,7 @@
 import {configureStore} from "@reduxjs/toolkit";
 import tasksReducer from './tasksSlice.js'
 import categoriesReducer from "./categoriesSlice.js";
-import logger from "react-logger";
+import {logger} from "redux-logger";
 
 const tasksStore = configureStore({
     reducer: {
@@ -9,4 +9,6 @@ const tasksStore = configureStore({
         categories: categoriesReducer,
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
-})
+});
+
+export default tasksStore;

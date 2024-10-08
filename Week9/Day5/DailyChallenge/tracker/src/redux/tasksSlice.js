@@ -1,9 +1,18 @@
-import {createSlice, nanoid} from '@reduxjs/toolkit';
-import {TASK_STATUS} from './constants.js'
+import { createSlice, nanoid } from '@reduxjs/toolkit';
+import { TASK_STATUS } from '../constants/taskStatus.js';
+import {sampleTasks} from "../fixtures/tasks.js";
+
+// const initialState = {
+//     tasks: {
+//         byId: {},
+//         allIds: [],
+//     },
+// };
 
 const initialState = {
-    tasks: [],
-}
+    byId: sampleTasks.byId,
+    allIds: sampleTasks.allIds,
+};
 
 const tasksSlice = createSlice({
     name: 'tasks',
@@ -11,45 +20,48 @@ const tasksSlice = createSlice({
     reducers: {
         addTask: {
             reducer(state, action) {
-                state.tasks.push(action.payload);
+                const { id } = action.payload;
+                state.byId[id] = action.payload;
+                state.allIds.push(id);
             },
-            prepare(category, title, description) {
+            prepare(categoryId, title, description) {
                 const newTask = {
                     id: nanoid(),
-                    category,
+                    categoryId,
                     title,
                     description,
                     status: TASK_STATUS.NOT_STARTED,
-                }
-                return {payload: newTask};
-            }
+                    dateCreation: new Date().toISOString(),
+                };
+                return { payload: newTask };
+            },
         },
         editTask: (state, action) => {
-            const {id, newCategory, newTitle, newDescription} = action.payload;
-            const existingTask = state.tasks.find(task => task.id === id);
+            const { id, newCategoryId, newTitle, newDescription } = action.payload;
+            const existingTask = state.byId[id];
             if (existingTask) {
-                existingTask.category = newCategory ? newCategory : existingTask.category;
+                existingTask.categoryId = newCategoryId ? newCategoryId : existingTask.categoryId;
                 existingTask.title = newTitle ? newTitle : existingTask.title;
                 existingTask.description = newDescription ? newDescription : existingTask.description;
             }
         },
         deleteTask: (state, action) => {
             const taskId = action.payload;
-            state.tasks = state.tasks.filter(task => task.id !== taskId);
+            delete state.byId[taskId];
+            state.allIds = state.allIds.filter((id) => id !== taskId);
         },
         updateTaskStatus: (state, action) => {
-            const {id, status} = action.payload;
-            const taskToUpdate = state.tasks.find(task => task.id === id);
+            const { id, status } = action.payload;
+            const taskToUpdate = state.byId[id];
             if (taskToUpdate) {
                 taskToUpdate.status = status;
             }
         },
-    }
-})
+    },
+});
 
-export const {
-    addTask,
+export const { addTask,
     editTask,
-    deleteTask
-} = tasksSlice.actions;
+    deleteTask,
+    updateTaskStatus } = tasksSlice.actions;
 export default tasksSlice.reducer;
