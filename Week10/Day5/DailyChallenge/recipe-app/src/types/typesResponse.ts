@@ -7,7 +7,7 @@ export interface ExtendedIngredient {
     unit: string;
     unitShort: string;
     unitLong: string;
-    originalString: string;
+    original: string;
     metaInformation: string[];
 }
 
